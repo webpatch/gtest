@@ -13,7 +13,7 @@ export default class Alert extends React.Component {
     return (
       // 程序入口组件
       <div styleName="alert">
-        <div styleName="title">title</div>
+        <div styleName="title">This is Alert</div>
         <div className="content">
           Hello world!
         </div>

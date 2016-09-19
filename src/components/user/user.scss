@@ -1,7 +1,9 @@
-$color:red;
+@import "../../css/var";
 .user {
-  background: $color;
+  background: $bgColor;
   .title {
-    background: $color;
+    background-color: $bgColor;
+    color: $textColor;
+    font-size: $titleSize;
   }
 }

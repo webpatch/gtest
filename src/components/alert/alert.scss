@@ -1,7 +1,9 @@
-$color:blue;
+@import "../../css/var";
+
 .alert {
-  background: $color;
+  background: #ccc;
   .title {
-    background: $color;
+    color: $textColor;
+    font-size: $titleSize;
   }
 }

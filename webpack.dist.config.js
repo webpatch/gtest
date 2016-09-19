@@ -2,8 +2,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require('webpack');
 var path = require('path');
-
-// var extractCSS1 = new ExtractTextPlugin('stylesheets/[name].css');
 var extractCSS = new ExtractTextPlugin('[name].css',{allChunks: true});
 
 module.exports = {
@@ -29,12 +27,7 @@ module.exports = {
         test: /\.scss$/,
         include: path.resolve(__dirname, 'src/'), // 跳过 node_modules 目录
         loader: extractCSS.extract(['css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]','sass'])
-      },
-      // {
-      //   test: /\.scss$/,
-      //   include: path.resolve(__dirname, 'src/css/'), // 跳过 node_modules 目录
-      //   loader: extractCSS1.extract(['css', 'sass'])
-      // }
+      }
     ]
   },
   plugins: [
@@ -43,14 +36,11 @@ module.exports = {
         'NODE_ENV': '"production"' // 定义环境变量为生产发布模式
       }
     }),
-    // new ExtractTextPlugin("styles.css", {
-    //   allChunks: true
-    // }),
-    extractCSS
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
+    extractCSS,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
 };
