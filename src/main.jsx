@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import User from "./components/user/user";
-import Alert from "./components/alert/alert";
+// import Alert from "./components/alert/alert";
 
 export default class Main extends React.Component {
   render() {
@@ -11,7 +11,6 @@ export default class Main extends React.Component {
       // 程序入口组件
       <div>
         <User/>
-        <Alert/>
       </div>
     );
   }

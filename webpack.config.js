@@ -19,6 +19,12 @@ module.exports = {
     filename: 'bundle.js' // 输出文件名
   },
   module: {
+    postLoaders: [
+      {
+        test: /\.jsx?$/, // 通过正则匹配js,jsx文件
+        loaders: ['es3ify']
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/, // 通过正则匹配js,jsx文件

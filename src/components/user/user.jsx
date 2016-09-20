@@ -7,13 +7,13 @@ import CSSModules from 'react-css-modules'
 import styles from './user.scss'
 
 
-@CSSModules(styles)
-export default class User extends React.Component {
+// @CSSModules(styles)
+ export default class User extends React.Component {
   render() {
     return (
       // 程序入口组件
-      <div styleName="user">
-        <div styleName="title">title</div>
+      <div className={styles.user}>
+        <div styleName="title">title User AAA</div>
         <div className="content">
           Hello world!
         </div>
@@ -21,3 +21,5 @@ export default class User extends React.Component {
     );
   }
 }
+
+// export default CSSModules(User, styles);
