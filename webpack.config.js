@@ -32,20 +32,20 @@ module.exports = {
         loaders: ['babel'], // 调用 babel进行es6->es5转换,并且启用react热替换
         include: path.join(__dirname, 'src')
       },
-      {
-        test: /\.scss$/,
-        exclude: path.resolve(__dirname, 'src/css/'), // 跳过 node_modules 目录
-        loaders: [
-          "style",
-          "css-loader?modules&sourceMap=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]",
-          "sass?sourceMap"
-        ]
-      },
-      {
-        test: /\.scss$/,
-        include: path.resolve(__dirname, 'src/css/'),
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-      }
+      // {
+      //   test: /\.scss$/,
+      //   exclude: path.resolve(__dirname, 'src/css/'), // 跳过 node_modules 目录
+      //   loaders: [
+      //     "style",
+      //     "css-loader?modules&sourceMap=true&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]",
+      //     "sass?sourceMap"
+      //   ]
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   include: path.resolve(__dirname, 'src/css/'),
+      //   loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+      // }
     ]
   },
   plugins: [

@@ -1,9 +1,12 @@
+require('console-polyfill');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Main from './main';
 
-import './css/main.scss';
+
+import { Router, Route, browserHistory ,IndexRoute} from 'react-router';
 
 ReactDOM.render(
   (<AppContainer>
