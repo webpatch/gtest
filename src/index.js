@@ -1,12 +1,9 @@
-require('console-polyfill');
+import 'console-polyfill'; //IE8 console 兼容
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Main from './main';
-
-
-import { Router, Route, browserHistory ,IndexRoute} from 'react-router';
 
 ReactDOM.render(
   (<AppContainer>

@@ -12,18 +12,20 @@ import AppIndex from './app-index'
 
 const store = configureStore()
 // const history = syncHistoryWithStore(browserHistory, store)
+import './css/main.scss';
 
 export default class Main extends React.Component {
   render() {
     return (
-        <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/" component={AppIndex}>
-                <Route path="app" component={App}/>
-                <Route path="user" component={User}/>
-            </Route>
-        </Router>
-        </Provider>
+        <div>aaaa</div>
     );
   }
 }
+{/*<Provider store={store}>*/}
+  {/*<Router history={browserHistory}>*/}
+    {/*<Route path="/" component={AppIndex}>*/}
+      {/*<Route path="app" component={App}/>*/}
+      {/*<Route path="user" component={User}/>*/}
+    {/*</Route>*/}
+  {/*</Router>*/}
+{/*</Provider>*/}
